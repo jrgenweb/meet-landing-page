@@ -1,0 +1,224 @@
+:root {
+    /*primary colors*/
+    --clr-primary: hsl(192, 37%, 48%);
+    --clr-secondary: hsl(268, 34%, 53%);
+
+    /* neutrals */
+    --clr-neutral-800: hsl(240, 21%, 20%);
+    --clr-neutral-400: hsl(240, 10%, 57%);
+    --clr-neutral-300: hsl(192, 90%, 77%);
+    --clr-neutral-200: hsl(278, 100%, 86%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+
+    --fs-300: 18px; /*l-h 26px*/
+
+    --fs-600: 64px;
+    --fs-500: 40px;
+    --fs-400: 1rem;
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+html {
+    font-family: "Red Hat Display";
+}
+
+body {
+    font-size: var(--fs-300);
+    line-height: 26px;
+    font-weight: var(--fw-400);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: var(--fs-500);
+    line-height: 2.75rem;
+    font-weight: 900;
+    max-inline-size: 10ch;
+    margin: 0 auto;
+    color: var(--clr-neutral-800);
+}
+h2 {
+    /*font-size: var(--fs-500);
+    line-height: 2.75rem;
+    font-weight: var(--fw-600);*/
+
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--clr-neutral-800);
+}
+p {
+    color: var(--clr-neutral-400);
+}
+.overline {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+nav {
+    padding: 48px 0;
+    text-align: center;
+}
+.logo {
+    color: var(--clr-neutral-800);
+    font-weight: 900; /* var(--fw-700); */
+    text-decoration: none;
+    font-size: 32px;
+    position: relative;
+}
+
+header {
+    background-image: url("../images/tablet/image-hero.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+header .header__content {
+    padding-top: 200px;
+    text-align: center;
+}
+.header__content p {
+    padding: 1.5rem;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    font-size: 1rem;
+    color: var(--clr-neutral-400);
+}
+.header__actions {
+    padding-top: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+main {
+    position: relative;
+    margin-top: calc(250px - 64px);
+    padding-top: 64px;
+    text-align: center;
+    padding: 80px 1.5rem;
+}
+
+main .gallery {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.gallery img {
+    width: 151px;
+    height: 143px;
+    border-radius: 0.5rem;
+}
+main p {
+    padding: 2rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 26px;
+
+    position: absolute;
+
+    left: 50%;
+    translate: -50%;
+    padding: 0.9rem 1.2rem;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    color: var(--clr-neutral-400);
+
+    border-radius: 50%;
+
+    top: -2.4rem;
+}
+.counter::before {
+    content: "";
+    background-color: #d8d8d8;
+    width: 1px;
+    height: 84px;
+
+    top: -84px;
+    left: 50%;
+    translate: -50%;
+
+    position: absolute;
+}
+/* buttons */
+
+.btn {
+    border-radius: 1.8125rem;
+    color: var(--clr-neutral-100);
+    border: 0;
+    padding: 1.25rem 2.5rem;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-600);
+}
+
+.btn span {
+}
+.btn_primary {
+    background-color: var(--clr-primary);
+}
+.btn_primary span {
+    color: #8fe3f9;
+}
+.btn_primary:hover {
+    background-color: var(--clr-primary);
+}
+
+.btn_secondary {
+    padding: 1.25rem 1.9rem;
+    background-color: var(--clr-secondary);
+}
+.btn_secondary span {
+    color: #d9b8ff;
+}
+.btn_secondary:hover {
+    background-color: var(--clr-secondary);
+}
+
+footer {
+    --opacity: 0.8;
+    background: linear-gradient(hsla(192, 37%, 48%, var(--opacity)), hsla(192, 37%, 48%, var(--opacity))),
+        url("../images/mobile/image-footer.jpg");
+    position: relative;
+    background-size: auto, cover;
+    padding: 90px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 4rem;
+}
+footer p {
+    padding: 2rem 0;
+}
+footer h2,
+footer p {
+    color: var(--clr-neutral-100);
+}
