@@ -1,0 +1,44 @@
+@use "../util/mixins.scss" as *;
+
+main {
+    position: relative;
+    text-align: center;
+}
+
+main .gallery {
+    display: grid;
+    grid-template-columns: 151px 151px;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1110px;
+    margin: 0 auto;
+    @include respond("medium") {
+        grid-template-columns: repeat(4, 164px);
+    }
+    @include respond("large") {
+        justify-content: center;
+        grid-template-columns: repeat(4, 255px);
+        margin-top: 1rem;
+    }
+}
+.gallery img {
+    width: 151px;
+    height: 143px;
+    border-radius: 0.5rem;
+    @include respond("medium") {
+        width: 164px;
+        height: 156px;
+    }
+    @include respond("large") {
+        width: 255px;
+
+        height: auto;
+    }
+}
+
+main p {
+    /*  padding: 2rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px; */
+}

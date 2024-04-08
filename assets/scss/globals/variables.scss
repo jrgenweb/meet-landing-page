@@ -1,0 +1,22 @@
+:root {
+    /*primary colors*/
+    --clr-primary: hsl(192, 37%, 48%);
+    --clr-secondary: hsl(268, 34%, 53%);
+
+    /* neutrals */
+    --clr-neutral-800: hsl(240, 21%, 20%);
+    --clr-neutral-400: hsl(240, 10%, 57%);
+    --clr-neutral-300: hsl(192, 90%, 77%);
+    --clr-neutral-200: hsl(278, 100%, 86%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+
+    --fs-300: 18px; /*l-h 26px*/
+
+    --fs-600: 64px;
+    --fs-500: 40px;
+    --fs-400: 1rem;
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}

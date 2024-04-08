@@ -1,0 +1,57 @@
+@use "../util/mixins.scss" as *;
+header {
+    background-image: url("../images/tablet/image-hero.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    @include respond("medium") {
+        background-size: auto;
+    }
+    @include respond("large") {
+        background: url("../images/desktop/image-hero-left.png"), url("../images/desktop/image-hero-right.png");
+
+        background-size: auto, auto;
+        background-position:
+            0px 0,
+            top 60px right;
+        background-repeat: no-repeat, no-repeat;
+
+        padding-top: 3.5rem;
+        h1 {
+        }
+    }
+
+    .header__content {
+        padding-top: 50%;
+        text-align: center;
+        @include respond("medium") {
+            padding-top: 400px;
+        }
+        @include respond("large") {
+            padding-top: 0px;
+        }
+        p {
+            padding: 1.5rem;
+
+            @include respond("large") {
+                max-inline-size: 49ch;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .header__actions {
+        padding-top: 0.55rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        @include respond("medium") {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}

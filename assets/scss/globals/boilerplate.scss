@@ -1,0 +1,61 @@
+@use "variables.scss" as *;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+html {
+    font-family: "Red Hat Display";
+}
+
+body {
+    font-size: var(--fs-300);
+    line-height: 26px;
+    font-weight: var(--fw-400);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 48px 0;
+    text-align: center;
+}
+.logo {
+    color: var(--clr-neutral-800);
+    font-weight: 900; /* var(--fw-700); */
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 26px;
+
+    position: absolute;
+
+    left: 50%;
+    translate: -50%;
+    padding: 0.9rem 1.2rem;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    color: var(--clr-neutral-400);
+    border-radius: 50%;
+    top: calc((13px + 0.9rem) * -1); //half of the circle size
+}
+.counter::before {
+    content: "";
+    background-color: #d8d8d8;
+    width: 1px;
+    height: 84px;
+
+    top: -84px;
+    left: 50%;
+    translate: -50%;
+
+    position: absolute;
+}

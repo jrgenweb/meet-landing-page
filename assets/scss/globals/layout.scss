@@ -1,0 +1,35 @@
+@use "../globals/variables.scss" as *;
+@use "../globals/typography.scss" as *;
+@use "../util/mixins.scss" as *;
+
+main,
+.header_wrapper,
+footer {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 80px 1.5rem;
+    margin-top: 40px; /**/
+    @include respond("large") {
+        margin-top: 80px;
+        padding: 80px 80px;
+    }
+}
+header {
+    /*  background-color: blue; */
+    padding-bottom: 80px;
+}
+
+main {
+    margin-top: 110px;
+    padding-top: 64px;
+    padding: 80px 1.5rem;
+
+    @include respond("large") {
+        margin-top: 150px;
+    }
+
+    /* background-color: red; */
+}

@@ -1,0 +1,64 @@
+@use "../globals/variables.scss" as *;
+@use "../util/mixins.scss" as *;
+
+h1 {
+    font-size: var(--fs-500);
+    line-height: 2.75rem;
+    font-weight: 900;
+    max-inline-size: 10ch;
+    margin: 0 auto;
+    color: var(--clr-neutral-800);
+    @include respond("medium") {
+        font-size: 3rem;
+        line-height: 1;
+    }
+    @include respond("large") {
+        font-size: 4rem;
+    }
+}
+h2 {
+    /*font-size: var(--fs-500);
+    line-height: 2.75rem;
+    font-weight: var(--fw-600);*/
+
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--clr-neutral-800);
+
+    @include respond("large") {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        max-inline-size: 16ch;
+        margin: 0 auto;
+    }
+}
+p {
+    color: var(--clr-neutral-400);
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    padding: 1.6rem 0;
+    @include respond("large") {
+        letter-spacing: 0.2px;
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+        max-inline-size: 44ch;
+        margin: 0 auto;
+    }
+}
+
+.overline {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+
+    @include respond("large") {
+        padding-top: 5.2rem;
+    }
+}

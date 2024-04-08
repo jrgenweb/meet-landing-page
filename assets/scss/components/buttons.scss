@@ -1,0 +1,36 @@
+@use "../globals/variables.scss" as *;
+/* buttons */
+
+.btn {
+    border-radius: 1.8125rem;
+    color: var(--clr-neutral-100);
+    border: 0;
+    padding: 1.25rem 2.5rem;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-600);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn_primary {
+    background-color: var(--clr-primary);
+}
+.btn_primary span {
+    color: var(--clr-neutral-300);
+}
+.btn_primary:hover {
+    background-color: #71c0d4;
+}
+
+.btn_secondary {
+    padding: 1.25rem 1.9rem;
+    background-color: var(--clr-secondary);
+}
+.btn_secondary span {
+    color: var(--clr-neutral-200);
+}
+.btn_secondary:hover {
+    background-color: #b18bdd;
+}

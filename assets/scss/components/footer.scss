@@ -1,0 +1,40 @@
+@use "../util/mixins.scss" as *;
+footer {
+    --opacity: 0.8;
+    background: linear-gradient(hsla(192, 37%, 48%, var(--opacity)), hsla(192, 37%, 48%, var(--opacity))),
+        url("../images/mobile/image-footer.jpg");
+    position: relative;
+    background-size: auto, cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include respond("medium") {
+        background: linear-gradient(hsla(192, 37%, 48%, var(--opacity)), hsla(192, 37%, 48%, var(--opacity))),
+            url("../images/tablet/image-footer.jpg");
+        background-size: auto, cover;
+    }
+    @include respond("large") {
+        background: linear-gradient(hsla(192, 37%, 48%, var(--opacity)), hsla(192, 37%, 48%, var(--opacity))),
+            url("../images/desktop/image-footer.jpg");
+        background-size: auto, cover;
+        background-repeat: repeat, no-repeat;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        justify-content: space-evenly;
+        justify-items: center;
+    }
+}
+footer p {
+    padding: 2rem 0;
+}
+footer h2,
+footer p {
+    color: var(--clr-neutral-100);
+}
